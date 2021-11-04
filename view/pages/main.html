@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../styles/main.css">
+	<link rel="icon" href="../images/dj.png" />
+	<title>View</title>
+</head>
+<body>
+<div class="center">
+	<h1>View</h1>
+	<p>Essa é a página de acesso ao site. Aqui você pode modificar o banco de dados!</p>
+	<div class="center_inside">
+		<h2>Mostrando todas as tuplas de uma tabela</h2>
+		<p>
+			Seu objetivo nessa etapa é, ao clicar no botão abaixo, popular a tabela (em HTML) com os itens que constam
+			em uma tabela (do banco de dados) que você desenvolveu (pode ser qualquer tabela).
+		</p>
+		<p>Clique no botão para ver o exemplo!</p>
+		<form id="populate_table" name="populate_table" action="http://localhost:5000/populate_table" method="POST">
+			<input type="submit">
+		</form>
+		<table id="first_task_response_table">
+		</table>
+		<p id="first_task_response_paragraph">Resposta</p>
+	</div>
+	<div class="center_inside">
+		<h2>Selecionando a tabela</h2>
+		<p>
+			Seu objetivo nessa etapa é similar ao do exercício anterior. Porém agora você precisa usar o drop-down
+			para selecionar a tabela que será mostrada aqui.
+		</p>
+		<form id="select_and_populate_table" name="select_and_populate_table" action="http://localhost:5000/select_and_populate_table" method="POST">
+			<label for="second_task_table_selector">Tabela:</label><br>
+			<select name="second_task_table_selector" id="second_task_table_selector">
+				<option value="memes">Memes</option>  <!-- TODO trocar pelo nome da tabela! -->
+				<option value="usuarios">Usuários</option>  <!-- TODO trocar pelo nome da tabela! -->
+				<option value="usuarios_para_memes">Usuários para Memes</option>  <!-- TODO trocar pelo nome da tabela! -->
+			</select>
+			<input type="submit">
+		</form>
+		<table id="second_task_response_table">
+		</table>
+		<p id="second_task_response_paragraph">Resposta</p>
+	</div>
+</div>
+</body>
+<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="../scripts/main.js" id="db_query_tables_script"></script>
+</html>
