@@ -363,7 +363,7 @@ def main(path: str = '.', db_name: str = 'test.db') -> None:
                     'id_time': 2021301,
                     'categoria': 'Adulto',
                     'posição': 'Goleiro',
-                    'codigo_cadastro': 20214152021301,
+                    'codigo_cadastro': 2021152021301,
                     'país': 'França',
                     'Naipe': 'Masculino',
                     'tipo': 'Profissional'

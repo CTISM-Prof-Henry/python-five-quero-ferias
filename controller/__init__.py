@@ -44,19 +44,159 @@ def main():
         '''
 
     @app.route('/populate_table', methods=['POST'])
-    def populate_table():
-        # TODO desenvolva seu código aqui
+    def populate_table(): 
         response = jsonify([
-            {
-                'nome': 'henry',
-                'idade': 29,
-                'altura': 1.83
-            },
-            {
-                'nome': 'frida',
-                'idade': 1,
-                'altura': 0.40
-            }
+              {
+                    'Nome': 'Babi Arenhart',
+                    'Idade': 35,
+                    'Time': 'Krim Mercator',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Goleira',
+                    'País': 'Brasil',
+                    'Naipe': 'Feminino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    
+                    'Nome': 'Katarina Krpez',
+                    'Idade': 33,
+                    'Time': 'Krim Mercator',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Ponta',
+                    'País': 'Servia',
+                    'Naipe': 'Feminino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    'Nome': 'Nina Zabjek',
+                    'Idade': 23,
+                    'Time': 'Krim Mercator',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Central',
+                    'País': 'Eslovenia',
+                    'Naipe': 'Feminino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    'Nome': 'Lois Abbingh',
+                    'Idade': 29,
+                    'Time': 'Odense Handbold',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Armadora',
+                    'País': 'França',
+                    'Naipe': 'Feminino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    'Nome': 'Kamilla Larsen',
+                    'Idade': 38,
+                    'Time': 'Odense Handbold',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Pivo',
+                    'País': 'Dinamarca',
+                    'Naipe': 'Feminino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    'Nome': 'Freja Cohrt',
+                    'Idade': 27,
+                    'Time': 'Odense Handbold',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Ponta',
+                    'País': 'Dinamarca',
+                    'Naipe': 'Feminino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    'Nome': 'Rikke Iversen',
+                    'Idade': 28,
+                    'Time': 'Odense Handbold',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Pivo',
+                    'País': 'Dinamarca',
+                    'Naipe': 'Feminino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    'Nome': 'Silvia Navarro',
+                    'Idade': 42,
+                    'Time': 'Rocasa Gran Canaria ACE',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Goleira',
+                    'País': 'Espanha',
+                    'Naipe': 'Feminino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    'Nome': 'Mizuki Hosoe',
+                    'Idade': 28,
+                    'Time': 'Rocasa Gran Canaria ACE',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Central',
+                    'País': 'Japao',
+                    'Naipe': 'Feminino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    'Nome': 'Agni Zygoura',
+                    'Idade': 25,
+                    'Time': 'Rocasa Gran Canaria ACE',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Central',
+                    'País': 'Grecia',
+                    'Naipe': 'Feminino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    'Nome': 'Rosana Martinez',
+                    'Idade': 17,
+                    'Time': 'Rocasa Gran Canaria ACE',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Armadora',
+                    'País': 'Espanha',
+                    'Naipe': 'Feminino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    'Nome': 'Vicent Gerald',
+                    'Idade': 34,
+                    'Time': 'PSG Handball',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Goleiro',
+                    'País': 'França',
+                    'Naipe': 'Masculino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    'Nome': 'Leo Villain',
+                    'Idade': 18,
+                    'Time': 'PSG Handball',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Goleiro',
+                    'País': 'França',
+                    'Naipe': 'Masculino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    'Nome': 'Loik Spady',
+                    'Idade': 21,
+                    'Time': 'PSG Handball',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Goleiro',
+                    'País': 'França',
+                    'Naipe': 'Masculino',
+                    'Tipo': 'Profissional'
+                },
+                {
+                    'Nome': 'Yann Genty',
+                    'Idade': 39,
+                    'Time': 'PSG Handball',
+                    'Categoria': 'Adulto',
+                    'Posição': 'Goleiro',
+                    'País': 'França',
+                    'Naipe': 'Masculino',
+                    'Tipo': 'Profissional'
+                }
         ])
         # TODO desenvolva seu código aqui
 
@@ -69,17 +209,9 @@ def main():
         with model.SQLite(os.path.join(db_path, db_name)) as cursor:
             # TODO desenvolva seu código aqui
             response = jsonify([
-                {
-                    'nome': 'henry',
-                    'idade': 29,
-                    'altura': 1.83
-                },
-                {
-                    'nome': 'frida',
-                    'idade': 1,
-                    'altura': 0.40
-                }
-            ])
+                
+
+                ])
             # TODO desenvolva seu código aqui
 
             # precisa sempre adicionar essa linha para as respostas dadas
