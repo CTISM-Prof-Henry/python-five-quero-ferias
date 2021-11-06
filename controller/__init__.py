@@ -6,7 +6,7 @@ import sys
 filepath = os.path.dirname(__file__)
 sys.path.append(os.path.join(filepath, '..'))
 
-# importa módulo do banco de dados; permite rodar as funções desse módulo através da sintaxe 
+# importa módulo do banco de dados; permite prodar as funções desse módulo através da sintaxe 
 # model.<nome_da_função>
 # por exemplo, model.select_rows
 # para selecionar as linhas
@@ -198,22 +198,21 @@ def main():
                     'Tipo': 'Profissional'
                 }
         ])
-        # TODO desenvolva seu código aqui
 
-        # precisa sempre adicionar essa linha para as respostas dadas
         response.headers.add('Access-Control-Allow-Origin', '*')
         return response
 
     @app.route('/select_and_populate_table', methods=['POST'])
     def select_and_populate_table():
         with model.SQLite(os.path.join(db_path, db_name)) as cursor:
-            # TODO desenvolva seu código aqui
+            
             response = jsonify([
-                
+                {
+                    
+                }
 
                 ])
-            # TODO desenvolva seu código aqui
-
+            
             # precisa sempre adicionar essa linha para as respostas dadas
             response.headers.add('Access-Control-Allow-Origin', '*')
             return response
