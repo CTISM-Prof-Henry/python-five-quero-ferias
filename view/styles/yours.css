@@ -7,7 +7,10 @@ header{
     background-image: url(fundo.jpg);
     height: 95vh;
     background-attachment: fixed;
-    background-size: 95%;
+    background-size: 100%;
+    background-position: center;
+    margin-left: 2%;
+    margin-right: 2%; 
 }
 .container{
     display: flex;
@@ -29,38 +32,32 @@ section{
 }
 
 body {
-  background: #000000;
+  background: #ffffff;
   font-family: "Montserrat", sans-serif;
 }
 
 .navMenu {
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 50%;
   margin-top: 300px;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  background-color:rgb(43, 44, 46);
+  border-radius: 7px 7px 7px 7px;
 }
 
 .navMenu a {
-  border-style: inherit;
+  color: #f6f4e6;
   text-decoration: none;
-  font-size: 1.2em;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 20px;
   text-transform: uppercase;
-  font-weight: 500;
   display: inline-block;
   width: 80px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  border: 1px #ffffff;
-  padding-right: 60px;
-  padding-left: 60px;
-  background-color: #709CEE;
-  font-family:'Acme', sans-serif;
-  font-size: 20px;
-  color: white;
-  border-radius: 7px 7px 7px 7px;
-  size: 16px;
 }
 
 .navMenu a:hover {
@@ -73,7 +70,7 @@ body {
 
 label[for=”bt_menu”]{
     padding: 5px;
-    background-color: #222;
+    background-color: #fffefe;
     color: #fff;
     font-family: Arial;
     text-align: center;
@@ -120,11 +117,11 @@ h2{
   margin-left: 00px;
   margin-right: 200px;
   font: sans-serif;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 40px;
 }
 h3{
   font-family: 'Archivo Black', sans-serif;
-  color: white;
+  color: rgb(0, 0, 0);
   margin:auto;
 }
