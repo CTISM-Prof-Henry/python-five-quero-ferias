@@ -2,15 +2,17 @@ html{
     background-color: black;
     
 }
+/* ESTILO DOS FUNDOS E DETALES ESTETICOS */
 header{
     font: sans-serif;
-    background-image: url(fundo.jpg);
-    height: 95vh;
+    background-image: url('https://cdn.pixabay.com/photo/2017/02/27/11/16/sports-2102975_960_720.jpg');
+    height: 100vh;
     background-attachment: fixed;
     background-size: 100%;
     background-position: center;
-    margin-left: 2%;
-    margin-right: 2%; 
+}
+h1{
+  font-size: clamp(1em, 1em + 1vw, 11em);
 }
 .container{
     display: flex;
@@ -35,84 +37,7 @@ body {
   background: #ffffff;
   font-family: "Montserrat", sans-serif;
 }
-
-.navMenu {
-  position: absolute;
-  top: 54%;
-  left: 50%;
-  margin-top: 300px;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background-color:rgb(43, 44, 46);
-  border-radius: 7px 7px 7px 7px;
-}
-
-.navMenu a {
-  color: #f6f4e6;
-  text-decoration: none;
-  margin-top: 10px;
-  margin-left: 10px;
-  font-size: 20px;
-  text-transform: uppercase;
-  display: inline-block;
-  width: 80px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.navMenu a:hover {
-  color: #000000;
-}
-* {
-    margin: 0;
-    padding: 0;
-    }
-
-label[for=”bt_menu”]{
-    padding: 5px;
-    background-color: #fffefe;
-    color: #fff;
-    font-family: Arial;
-    text-align: center;
-    font-size: 30px;
-    cursor: pointer;
-    height: 50px;
-    }
-   
-   #bt_menu {
-    display: none;
-    }
-   
-   label[for=”bt_menu”]{
-    display: none;
-    }
-   
-@media(max-width: 800px) {
-    label[for=”bt_menu”] {
-     display: block;
-     }
-      
-    #bt_menu:checked ~ .menu{
-     margin-left: 0;
-     }
-      
-    .menu{
-     margin-top: 5px;
-     margin-left: -100%;
-     transition: all .4s;
-     }
-      
-    .menu ul li {
-     width: 100%;
-     float: none;
-     }
-      
-    .menu ul ul {
-     position: static;
-     overflow: hidden;
-     max-height: 0;
-    }
-}
+/* ESTILOS DE TITULOS E TEXTOS */
 h2{
   margin-left: 00px;
   margin-right: 200px;
@@ -124,4 +49,164 @@ h3{
   font-family: 'Archivo Black', sans-serif;
   color: rgb(0, 0, 0);
   margin:auto;
+}
+
+/* ESTILOS DO MENU (CODIGO PRONTO POREM ALTERADO PARA COMBINAR MELHOR AO MEU HTML) https://codepen.io/melnik909/pen/VQOodQ */
+
+.r-link{
+  display: var(--rLinkDisplay, inline-flex) !important;
+}
+.r-link[href]{
+  color: var(--rLinkColor) !important;
+  text-decoration: var(--rLinkTextDecoration, none) !important;
+}
+.r-list{
+  padding-left: var(--rListPaddingLeft, 0) !important;
+  margin-top: var(--rListMarginTop, 0) !important;
+  margin-bottom: var(--rListMarginBottom, 0) !important;
+  list-style: var(--rListListStyle, none) !important;
+}
+.menu{
+  --rLinkColor: var(--menuLinkColor, currentColor);
+}
+.menu__link{
+  display: var(--menuLinkDisplay, block);
+}
+.menu__link:focus{
+  outline: var(--menuLinkOutlineWidth, 2px) solid var(--menuLinkOutlineColor, currentColor);
+  outline-offset: var(--menuLinkOutlineOffset);
+}
+.menu:hover .menu__link:not(:hover){
+  --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
+}
+.menu{
+  background-color: var(--menuBackgroundColor, #000000b6);
+  box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+}
+.menu__list{
+  display: flex;  
+}
+.menu__link{
+  padding: var(--menuLinkPadding, 1.5rem 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.text-underlined{
+  position: relative;
+  overflow: hidden;
+
+  will-change: color;
+  transition: color .25s ease-out;  
+}
+.text-underlined::before, 
+.text-underlined::after{
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--textUnderlinedLineColor, currentColor);
+
+  will-change: width;
+  transition: width .1s ease-out;
+
+  position: absolute;
+  bottom: 0;
+}
+.text-underlined::before{
+  left: 50%;
+  transform: translateX(-50%); 
+}
+.text-underlined::after{
+  right: 50%;
+  transform: translateX(50%); 
+}
+.text-underlined:hover::before, 
+.text-underlined:hover::after{
+  width: 100%;
+  transition-duration: .2s;
+}
+.page__custom-settings{
+  --menuBackgroundColor: #000000b6;
+  --menuLinkColor: #fff;
+  --menuLinkColorUnactive: #1c4669;
+  --menuLinkOutlineOffset: -.5rem; 
+}
+body{
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;  
+  flex-direction: column;
+}
+.page{
+  box-sizing: border-box;
+  max-width: 460px;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  margin: auto;
+}
+.page__menu:nth-child(n+2){
+  margin-top: 3rem;
+}
+/* ESTILO TELA DE LOGIN */
+label{
+  color: #00008B;
+  font-family: 'Acme', sans-serif;
+  font-size: 12px;
+}
+input[type='submit']{
+  padding:10px;
+  padding-top: 4px;
+  border: 1px solid #709CEE;
+  background-color: #709CEE;
+  font-family:'Acme', sans-serif;
+  font-size: 14px;
+  color: white;
+  border-radius: 7px 7px 7px 7px;
+  size: 15px;
+  margin-left: 40px;
+}
+input[type='e-mail']{
+  padding: 10px;
+  border: 1px solid #CEE2F8;
+  background-color: #CEE2F8;
+  font-family:'Acme', sans-serif;
+  color: black;
+  border-radius: 20px 20px 20px 20px;
+  size: 10px;
+  margin-left: 145px;
+}
+input[type='password']{
+  padding: 10px;
+  border: 1px solid #CEE2F8;
+  background-color: #CEE2F8;
+  font-family:'Acme', sans-serif;
+  color: black;
+  border-radius: 20px 20px 20px 20px;
+  size: 10px;
+  margin-left: 145px;
+}
+input[type='button']{
+  padding:8px;
+  padding-top: 4px;
+  border: 1px solid #806FE6;
+  background-color: #806FE6;
+  font-family: Dejavu Sans, Arial, Verdana, sans-serif; 
+  color: white;
+  border-radius: 7px 7px 7px 7px;
+  size: 10px;
+  margin-top: 85px;
+  margin-left: 100px;
+}
+input[type='checkbox']{
+margin-top: 10px;
+margin-left: 150px;
+}
+h4{
+color: #00008B;             
+font-family: 'Stencil Std', fantasy;
+font-size: 65px;
+padding-right: 120px;
+padding-top: 0px;
+margin-top: 0px;
+margin-left: 120px;
 }
