@@ -1,0 +1,83 @@
+html {
+background-image: linear-gradient( to right, #A4CCF7, #9BF2F7, #709CEE, #806FE6); }
+body {
+  margin:auto;
+  margin-top: 45px;
+  bottom: 45px;
+  width: 500px;
+  height: 450px;
+  background-color: white;
+  padding: 30px 30px 40px 40px;
+  border-radius: 20px 20px 20px 20px;
+}   
+label{
+    color: #00008B;
+    font-family: 'Acme', sans-serif;
+    font-size: 12px;
+}
+h1{
+    color: #00008B; 
+    font-family: 'Stencil Std', fantasy;
+    font-size: 65px;
+    padding-right: 120px;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-left: 120px;
+}
+h2{
+    font-family: 'Acme', sans-serif;
+    font-size: 13px;
+    padding-right: 150px;
+    padding-top: 3px;
+    margin-top: 2px;
+    margin: auto;
+}
+input[type='submit']{
+padding:10px;
+padding-top: 4px;
+border: 1px solid #709CEE;
+background-color: #709CEE;
+font-family:'Acme', sans-serif;
+font-size: 14px;
+color: white;
+border-radius: 7px 7px 7px 7px;
+size: 15px;
+margin-left: 40px;
+        }
+ input[type='e-mail']{
+padding: 10px;
+border: 1px solid #CEE2F8;
+background-color: #CEE2F8;
+font-family:'Acme', sans-serif;
+color: black;
+border-radius: 20px 20px 20px 20px;
+size: 10px;
+margin-left: 145px;
+        }
+        input[type='password']{
+padding: 10px;
+border: 1px solid #CEE2F8;
+background-color: #CEE2F8;
+font-family:'Acme', sans-serif;
+color: black;
+border-radius: 20px 20px 20px 20px;
+size: 10px;
+margin-left: 145px;
+        }
+        input[type='button']{
+padding:8px;
+padding-top: 4px;
+border: 1px solid #806FE6;
+background-color: #806FE6;
+font-family: Dejavu Sans, Arial, Verdana, sans-serif; 
+color: white;
+border-radius: 7px 7px 7px 7px;
+size: 10px;
+margin-top: 85px;
+margin-left: 100px;
+        }
+        input[type='checkbox']{
+            margin-top: 10px;
+            margin-left: 150px;
+        }
+ 
