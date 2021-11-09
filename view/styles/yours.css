@@ -1,4 +1,10 @@
-/* ESTILO CAPA "ENTRADA" DA PAGINA */
+/*!!!LEMBRAR DE NA PROXIMA ENTRADA NO VSCODE
+ DEIXAR ALGUNS ITENS RESPONSIVOS POIS NEM TODOS ESTAO!!!!*/
+ /*parte do login nao esta organziada, lembrar de deixar mais apresentavel*/
+ /*Estilo das tabelas é discutivel, pensar estilo.*/
+ /*Arrumar fotos para serem responsivas*/
+
+/* ESTILO CAPA "ENTRADA" DA PAGINA ja responsiva */
 header{
     font: sans-serif;
     background-image: url('https://cdn.pixabay.com/photo/2017/02/27/11/16/sports-2102975_960_720.jpg');
@@ -31,7 +37,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 /* MENU HORIZONTAL (CODIGO PRONTO POREM ALTERADO PARA COMBINAR MELHOR AO HTML) 
-https://codepen.io/melnik909/pen/VQOodQ */
+https://codepen.io/melnik909/pen/VQOodQ  RESPONSIVO*/
 
 .r-link{
   display: var(--rLinkDisplay, inline-flex) !important;
@@ -127,7 +133,7 @@ body{
   margin-top: 3rem;
 }
 
-/* MENU HOME*/
+/* MENU HOME ainda nao esta responsivo*/
   img{
       float: left;
       border: transparent thin solid;
@@ -144,7 +150,7 @@ body{
   margin-left: 150px;
   color: #000000;     
   }
-/* MENU LOGIN */
+/* MENU LOGIN ainda nao responsivo*/
 input[type='submit']{
   padding:10px;
   padding-top: 4px;
@@ -201,7 +207,7 @@ label{
   font-size: 12px;
 }
 
-/* MENU EQUIPES */
+/* MENU EQUIPES responsivo */
 table{
   background:#bccef0;
   border: solid rgb(0, 0, 0) 0px;
@@ -219,7 +225,7 @@ td{
   width: 101px ;
   height: 40px;
 }
-/*TITULOS*/
+/*TITULOS nao foi verificado se esta responsivo*/
 h1{
   font-size: clamp(1em, 5em + 1vw, 5em);
   font-family: 'Stencil Std', fantasy;
