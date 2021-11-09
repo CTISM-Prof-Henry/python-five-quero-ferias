@@ -1,4 +1,4 @@
-/* ESTILO DOS FUNDOS E DETALES ESTETICOS */
+/* ESTILO CAPA "ENTRADA" DA PAGINA */
 header{
     font: sans-serif;
     background-image: url('https://cdn.pixabay.com/photo/2017/02/27/11/16/sports-2102975_960_720.jpg');
@@ -6,10 +6,6 @@ header{
     background-attachment: fixed;
     background-size: 100%;
     background-position: center;
-}
-h1{
-  font-size: clamp(1em, 5em + 1vw, 5em);
-  font-family: 'Stencil Std', fantasy;
 }
 .container{
     display: flex;
@@ -34,21 +30,8 @@ body {
   background: #ffffff;
   font-family: "Montserrat", sans-serif;
 }
-/* ESTILOS DE TITULOS E TEXTOS */
-h2{
-  margin-left: 00px;
-  margin-right: 200px;
-  font: sans-serif;
-  color: rgb(0, 0, 0);
-  font-size: 40px;
-}
-h3{
-  font-family: 'Archivo Black', sans-serif;
-  color: rgb(0, 0, 0);
-  margin:auto;
-}
-
-/* ESTILOS DO MENU (CODIGO PRONTO POREM ALTERADO PARA COMBINAR MELHOR AO MEU HTML) https://codepen.io/melnik909/pen/VQOodQ */
+/* MENU HORIZONTAL (CODIGO PRONTO POREM ALTERADO PARA COMBINAR MELHOR AO HTML) 
+https://codepen.io/melnik909/pen/VQOodQ */
 
 .r-link{
   display: var(--rLinkDisplay, inline-flex) !important;
@@ -144,16 +127,7 @@ body{
   margin-top: 3rem;
 }
 
-/* HOME*/
-h4{
-  color: #00008B;             
-  font-family: 'Stencil Std', fantasy;
-  font-size: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 150px;
-  }
+/* MENU HOME*/
   img{
       float: left;
       border: transparent thin solid;
@@ -170,7 +144,7 @@ h4{
   margin-left: 150px;
   color: #000000;     
   }
-/* LOGIN */
+/* MENU LOGIN */
 input[type='submit']{
   padding:10px;
   padding-top: 4px;
@@ -217,14 +191,6 @@ input[type='button']{
   align-items: center;
   display: flex;
 }
-h4{
-color: #00008B;             
-font-family: 'Stencil Std', fantasy;
-font-size: 65px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
 input[type='checkbox']{
   margin-top: 3px;
   margin-left: 500px;
@@ -235,7 +201,7 @@ label{
   font-size: 12px;
 }
 
-/* EQUIPES */
+/* MENU EQUIPES */
 table{
   background:#bccef0;
   border: solid rgb(0, 0, 0) 0px;
@@ -252,6 +218,11 @@ table tr.even {
 td{
   width: 101px ;
   height: 40px;
+}
+/*TITULOS*/
+h1{
+  font-size: clamp(1em, 5em + 1vw, 5em);
+  font-family: 'Stencil Std', fantasy;
 }
 h2{
   color: #00008B;             
@@ -271,7 +242,16 @@ h2{
     align-items: center;
     justify-content: center;
     }
-    h6{
+    h4{
+      color: #00008B;             
+      font-family: 'Stencil Std', fantasy;
+      font-size: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 150px;
+      }
+    h5{
       color: #00008B;             
       font-family: 'Stencil Std', fantasy;
       font-size: 65px;
