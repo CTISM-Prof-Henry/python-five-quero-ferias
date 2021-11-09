@@ -237,8 +237,8 @@ label{
 
 /* EQUIPES */
 table{
-  background:#99b6eb;
-    border: solid rgb(0, 0, 0) 1px;
+  background:#bccef0;
+  border: solid rgb(0, 0, 0) 0px;
   font-family: 'Stencil Std', 'fantasy';
   font-size: 20px;
   color: rgb(0, 0, 0);
@@ -249,7 +249,10 @@ table{
 table tr.even {
   background: #F0FFFF;
 }
-
+td{
+  width: 101px ;
+  height: 40px;
+}
 h2{
   color: #00008B;             
   font-family: 'Stencil Std', fantasy;
