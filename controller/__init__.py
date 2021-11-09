@@ -205,12 +205,27 @@ def main():
     @app.route('/select_and_populate_table', methods=['POST'])
     def select_and_populate_table():
         with model.SQLite(os.path.join(db_path, db_name)) as cursor:
-            
-            response = jsonify([
-                {
-                    
+            from model import select_rows
+
+            # nome_da_tabela = request.args.get("select_and_populate_table")
+            nome_da_tabela = 'ATLETAS'
+            print('o nome da tabela é', nome_da_tabela)
+
+            # linhas = select_rows(cursor, nome_da_tabela)
+            #
+            # print(linhas)
+
+            meu_dicionario = {
+                    'coluna banana': {
+                        'a': 'b'
+                    },
+                    'coluna maçã': {
+                        'c': 'd'
+                    }
                 }
 
+            response = jsonify([
+                meu_dicionario
                 ])
             
             # precisa sempre adicionar essa linha para as respostas dadas
