@@ -271,3 +271,13 @@ h2{
     align-items: center;
     justify-content: center;
     }
+    h6{
+      color: #00008B;             
+      font-family: 'Stencil Std', fantasy;
+      font-size: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 150px;
+      }
+      
