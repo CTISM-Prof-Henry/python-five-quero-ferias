@@ -15,12 +15,12 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 102%;
+    height: 89%;
     color: white;
     background: #000000b6;
 }
 section{
-    height: 200px;
+    height: 120px;
 }
    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 * {
@@ -136,10 +136,9 @@ body{
 }
 .page{
   box-sizing: border-box;
-  max-width: 460px;
-  padding-left: .75rem;
-  padding-right: .75rem;
-  margin: auto;
+  max-width: 1900px;
+  padding-left: .0rem;
+  padding-right: .0rem;
 }
 .page__menu:nth-child(n+2){
   margin-top: 3rem;
@@ -171,7 +170,7 @@ h4{
   margin-left: 150px;
   color: #000000;     
   }
-/* ESTILO TELA DE LOGIN */
+/* LOGIN */
 input[type='submit']{
   padding:10px;
   padding-top: 4px;
@@ -213,8 +212,10 @@ input[type='button']{
   color: white;
   border-radius: 7px 7px 7px 7px;
   size: 10px;
-  margin-top: 20px;
-  margin-left: 400px;
+  margin-left: 500px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 h4{
 color: #00008B;             
@@ -224,8 +225,17 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+input[type='checkbox']{
+  margin-top: 3px;
+  margin-left: 500px;
+}
+label{
+  color: #00008B;
+  font-family: 'Acme', sans-serif;
+  font-size: 12px;
+}
 
-/* ESTILOS EQUIPES */
+/* EQUIPES */
 table{
   background:#99b6eb;
     border: solid rgb(0, 0, 0) 1px;
