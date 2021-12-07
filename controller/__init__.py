@@ -209,7 +209,7 @@ def main():
             response = jsonify([
                 tabela.execute("SELECT * FROM ATLETAS")
                 for row in tabela: 
-                print("* {Name}".format(Name=row['ATLETAS']
+                print("* {Name}".format(Name=row['']
                 ]) 
             response.headers.add('Access-Control-Allow-Origin', '*')
             return response
