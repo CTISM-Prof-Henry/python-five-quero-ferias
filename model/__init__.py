@@ -25,7 +25,6 @@ def create_table(cursor: sqlite3.Cursor, table: str, fields: dict, other_data: l
     )
     cursor.execute( command )
 
-
 def insert_rows(cursor: sqlite3.Cursor, table: str, tuples: list) -> None:
 
     for some_tuple in tuples:
