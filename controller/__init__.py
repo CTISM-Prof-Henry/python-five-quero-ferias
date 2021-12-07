@@ -205,12 +205,28 @@ def main():
     @app.route('/select_and_populate_table', methods=['POST'])
     def select_and_populate_table():
         with model.SQLite(os.path.join(db_path, db_name)) as cursor:
-            tabela = request.form['second_task_table_selector']
-            response = jsonify([
-                tabela.execute("SELECT * FROM ATLETAS")
-                for row in tabela: 
-                print("* {Name}".format(Name=row['']
-                ]) 
+            nome_tabela = request.form['second_task_table_selector']  # type: str
+
+            string_busca = 'SELECT NOME, IDADE, CATEGORIA, POSIÇÃO, PAIÍS, NAIPE, TIPO FROM %s' % nome_tabela
+            tabela = model.select_rows(cursor, string_busca)
+
+            # TODO a ordem que seleciona as colunas no select é a ordem dos itens da tupla
+            # TODO por exemplo, se fizer select nome, idade, a tupla será
+            # TODO ('luize', 16)
+
+            lista_de_dicionarios = []
+            for linha in tabela:  # linha = ('luize', 16)
+                lista_de_dicionarios.append({'nome': linha, 'Idade': linha,
+                 'categoria': linha, 'posição': linha, 'país': linha, 'Naipe': linha,
+                'tipo': linha})
+
+            # tabela é uma lista de tuplas
+            # jsonify precisa receber uma lista de dicionários
+
+            # for row in tabela:
+            #     print("* {Name}".format(Name=row['ATLETAS']))
+
+            response = jsonify(lista_de_dicionarios)
             response.headers.add('Access-Control-Allow-Origin', '*')
             return response
 
