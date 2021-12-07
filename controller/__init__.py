@@ -208,9 +208,9 @@ def main():
             tabela = request.form['second_task_table_selector']
             response = jsonify([
                 tabela.execute("SELECT * FROM ATLETAS")
-                for row in tabela:
-                print("* {Name}".format(Name=row['Name']
-                ])
+                for row in tabela: 
+                print("* {Name}".format(Name=row['ATLETAS']
+                ]) 
             response.headers.add('Access-Control-Allow-Origin', '*')
             return response
 
