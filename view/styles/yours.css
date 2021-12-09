@@ -17,7 +17,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 96%;
+    height: 93%;
     color: white;
     background: #000000b6;
 }
@@ -125,6 +125,7 @@ body{
 }
 .page{
   box-sizing: border-box;
+  float: top;
   max-width: 1900px;
   padding-left: .0rem;
   padding-right: .0rem;
@@ -138,7 +139,7 @@ body{
       float: left;
       border: transparent thin solid;
       padding: 10px;
-      margin: 0px 10px 10px 0;
+      margin: 10px;
       max-width: 600px;
   }
   p{
@@ -147,10 +148,14 @@ body{
   display: flex;
   align-items: center;
   justify-content: left;
-  margin-left: 150px;
+  margin: 15px;
+    padding: 2px;
   color: #000000;     
   }
 /* MENU LOGIN ainda nao responsivo*/
+div{
+  margin: auto;
+}
 input[type='submit']{
   padding:10px;
   padding-top: 4px;
@@ -161,7 +166,7 @@ input[type='submit']{
   color: white;
   border-radius: 7px 7px 7px 7px;
   size: 15px;
-  margin-left: 560px;
+  display: flex;
 }
 input[type='e-mail']{
   padding: 10px;
@@ -171,7 +176,6 @@ input[type='e-mail']{
   color: black;
   border-radius: 20px 20px 20px 20px;
   size: 10px;
-  margin-left: 500px;
 }
 input[type='password']{
   padding: 10px;
@@ -181,7 +185,6 @@ input[type='password']{
   color: black;
   border-radius: 20px 20px 20px 20px;
   size: 10px;
-  margin-left: 500px;
 }
 input[type='button']{
   padding:8px;
@@ -192,14 +195,12 @@ input[type='button']{
   color: white;
   border-radius: 7px 7px 7px 7px;
   size: 10px;
-  margin-left: 500px;
   justify-content: center;
   align-items: center;
   display: flex;
 }
 input[type='checkbox']{
   margin-top: 3px;
-  margin-left: 500px;
 }
 label{
   color: #00008B;
@@ -264,6 +265,6 @@ h2{
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-left: 150px;
+      margin: auto;
       }
       
