@@ -45,31 +45,31 @@ def main():
 
     @app.route('/populate_table', methods=['POST'])
     def populate_table():
-        with model.SQLite(os.path.join(db_path, db_name)) as cursor:
-            nome_tabela = 'ATLETAS'
-            string_busca = 'SELECT Nome, categoria, idade FROM %s' % nome_tabela
-            tabela = model.select_rows(cursor, string_busca)
-            lista_de_dicionarios = []
-            for linha in tabela:
-                lista_de_dicionarios.append({'nome': linha[0], 'categoria': linha[1], 'idade': linha[2],
-                                             })
-                response = jsonify(lista_de_dicionarios)
-                response.headers.add('Access-Control-Allow-Origin', '*')
-                return response
+     with model.SQLite(os.path.join(db_path, db_name)) as cursor:
+        nome_tabela ='ATLETAS'
+        busca = 'SELECT nome, idade, naipe, categoria, posição FROM %s' % nome_tabela
+        tabela = model.select_rows(cursor, busca)
+        dicionarios = []
+        for linha in tabela:
+            dicionarios.append({'nome': linha[0], 'idade': linha [1], 'naipe': [2], 'categoria': [3], 'posição': linha [4]
+                })
+        response = jsonify(dicionarios)
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        return response
 
     @app.route('/select_and_populate_table', methods=['POST'])
     def select_and_populate_table():
         with model.SQLite(os.path.join(db_path, db_name)) as cursor:
-            nome_tabela = request.form['second_task_table_selector']
-            string_busca = 'SELECT nome, idade, naipe FROM %s' % nome_tabela
-            tabela = model.select_rows(cursor, string_busca)
-
-            lista_de_dicionarios = []
+            nome_tabela = request.form['second_task_table_selector'] # puxei a tabela
+            busca = 'SELECT nome, naipe, idade, id_time, categoria, posição FROM %s' % nome_tabela #selecionei oq qr buscar das tabelas
+            tabela = model.select_rows(cursor, busca) 
+        #convertendo em dicionarios:
+            dicionarios = []
             for linha in tabela:
-                lista_de_dicionarios.append({'nome': linha[0], 'Idade': linha[1], 'naipe': linha[2],
-                                             })
-
-            response = jsonify(lista_de_dicionarios)
+                dicionarios.append({'nome': linha[0], 'naipe': linha [1], 'Idade': linha [2],
+                'id_time': linha [3], 'categoria': linha [4], 'posição': linha [5],
+                })
+            response = jsonify(dicionarios)
             response.headers.add('Access-Control-Allow-Origin', '*')
             return response
 
