@@ -1,6 +1,6 @@
 import os
 import sqlite3
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import sys
 
 filepath = os.path.dirname(__file__)
@@ -31,18 +31,13 @@ def main():
     db_name = 'test.db'
     # deleta & cria o banco de dados, toda vez que o backend for iniciado
     model.main(db_path, db_name)
-
-    @app.route('/')
+    #colocando como pagina inicial
+    app = Flask(__name__, template_folder='view/pages')
+    @app.route('/initial')
     def initial_page():
-        # TODO atividade que vale 10 pontos adicionais!
-        # TODO desenvolva uma página html no arquivo yours.html
-        # TODO leia o arquivo yours.html utilizando as funcionalidades
-        # TODO do python, e retorne o texto da página com este método
-        return '''
-        <h1>Olá mundo!</h1>
-        <p>Você acessou a página inicial da Web API.</p>
-        '''
+        return render_template('yours.html')
 
+    #populando tabela:
     @app.route('/populate_table', methods=['POST'])
     def populate_table():
      with model.SQLite(os.path.join(db_path, db_name)) as cursor:
