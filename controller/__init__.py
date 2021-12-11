@@ -61,14 +61,55 @@ def main():
     def select_and_populate_table():
         with model.SQLite(os.path.join(db_path, db_name)) as cursor:
             nome_tabela = request.form['second_task_table_selector'] # puxei a tabela
-            busca = 'SELECT nome, naipe, idade, id_time, categoria, posição FROM %s' % nome_tabela #selecionei oq qr buscar das tabelas
-            tabela = model.select_rows(cursor, busca) 
-        #convertendo em dicionarios:
+            busca = 'SELECT * FROM %s' % nome_tabela #selecionei oq qr buscar das tabelas
+            tabela = model.select_rows(cursor, busca)
+            #convertendo em dicionarios
             dicionarios = []
             for linha in tabela:
-                dicionarios.append({'nome': linha[0], 'naipe': linha [1], 'Idade': linha [2],
-                'id_time': linha [3], 'categoria': linha [4], 'posição': linha [5],
+                if nome_tabela == 'ATLETAS':
+                    dicionarios.append({
+                        'id_atleta': linha[0],
+                        'nome': linha[1],
+                        'Idade': linha[2],
+                        'id_time': linha[3],
+                        'categoria': linha[4],
+                        'posição': linha[5],
+                        'codigo_cadastro': linha[6],
+                        'país': linha[7],
+                        'Naipe': linha[8],
+                        'tipo': linha[9]
+                    })
+                elif nome_tabela == 'TECNICOS':
+                    dicionarios.append({
+                       'id_tecnico': linha[0],
+                        'nome': linha[1],
+                        'país': linha[2],
+                        'id_time':linha[3],
+                        'codigo_cadastro':linha[4],
+                        'ja_foi_atleta': linha[5],
+                        'treina_o_naipe': linha[6]
                 })
+                elif nome_tabela == 'TIMES':
+                    dicionarios.append({
+                        'id_time': linha[0],
+                        'nome': linha[1],
+                        'id_tecnico': linha[2],
+                        'Naipe': linha[3],
+                        'país': linha[4],
+                        'tipo': linha[5],
+                        'Competição_atual':linha[6]
+
+                    })
+                elif nome_tabela == 'ATLETA_para_TIME':
+                    dicionarios.append({
+                        'id_atleta': linha[0],
+                        'id_time':linha[1]
+                    })
+                elif nome_tabela == 'TECNICO_para_TIME':
+                   dicionarios.append({
+                        'id_tecnico': linha[0],
+                        'id_time':linha[1]
+                   }) 
             response = jsonify(dicionarios)
             response.headers.add('Access-Control-Allow-Origin', '*')
             return response

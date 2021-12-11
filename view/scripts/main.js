@@ -7,7 +7,6 @@ $("#populate_table").on("submit", function(event){
 		data: {populate_table: $("#populate_table").val()},
 		success: function(responseData) {
 			let res = JSON.stringify(responseData);
-			//document.getElementById('first_task_response_paragraph').textContent = res;
 
 			let response = eval(responseData);
 
@@ -46,7 +45,6 @@ $("#select_and_populate_table").on("submit", function(event){
 		data: {second_task_table_selector: $("#second_task_table_selector").val()},
 		success: function(responseData) {
 			let res = JSON.stringify(responseData);
-			document.getElementById('second_task_response_paragraph').textContent = res;
 
 			let response = eval(responseData);
 
