@@ -1,10 +1,4 @@
-/*!!!LEMBRAR DE NA PROXIMA ENTRADA NO VSCODE
- DEIXAR ALGUNS ITENS RESPONSIVOS POIS NEM TODOS ESTAO!!!!*/
- /*parte do login nao esta organziada, lembrar de deixar mais apresentavel*/
- /*Estilo das tabelas é discutivel, pensar estilo.*/
- /*Arrumar fotos para serem responsivas*/
-
-/* ESTILO CAPA "ENTRADA" DA PAGINA ja responsiva */
+/* ESTILO CAPA "ENTRADA" DA PAGINA*/
 header{
     font: sans-serif;
     background-image: url('https://cdn.pixabay.com/photo/2017/02/27/11/16/sports-2102975_960_720.jpg');
@@ -16,8 +10,9 @@ header{
 .container{
     display: flex;
     align-items: center;
+    margin: auto;
     justify-content: center;
-    height: 93%;
+    height: 90%;
     color: white;
     background: #000000b6;
 }
@@ -134,7 +129,7 @@ body{
   margin-top: 3rem;
 }
 
-/* MENU HOME ainda nao esta responsivo*/
+/* MENU HOME*/
   img{
       float: left;
       border: transparent thin solid;
@@ -152,7 +147,7 @@ body{
     padding: 2px;
   color: #000000;     
   }
-/* MENU LOGIN ainda nao responsivo*/
+/* MENU LOGIN*/
 div{
   margin: auto;
 }
@@ -208,7 +203,7 @@ label{
   font-size: 12px;
 }
 
-/* MENU EQUIPES responsivo */
+/* MENU EQUIPES: TABELAS*/
 table{
   background:#bccef0;
   border: solid rgb(0, 0, 0) 0px;
@@ -226,7 +221,7 @@ td{
   width: 101px ;
   height: 40px;
 }
-/*TITULOS nao foi verificado se esta responsivo*/
+/*TITULOS*/
 h1{
   font-size: clamp(1em, 5em + 1vw, 5em);
   font-family: 'Stencil Std', fantasy;

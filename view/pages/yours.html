@@ -5,7 +5,8 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Handball Today</title>
-    <link rel="stylesheet" type="text/css" href="../styles/yours.css">
+    <link rel="stylesheet" type="text/css" href="../styles/yours.css"> <!--INSERINDO O CSS-->
+    <link rel="icon" href="../styles/LOGO.png" /> <!--ADICIONADO O ICONI DO SITE-->
 </head>
     <header>
       <!-- ADICIONANDO O MENU AO TOPO DA PAGINA -->
@@ -13,6 +14,7 @@
       </nav>
       <nav class="page__menu page__custom-settings menu">
         <ul class="menu__list r-list">
+          <!--ITENS DO MENU E PARA ONDE "LEVAM"-->
           <li class="menu__group"><a href="yours.html#home" class="menu__link r-link text-underlined">Home</a></li>
           <li class="menu__group"><a href="yours.html#times" class="menu__link r-link text-underlined">Times</a></li>
           <li class="menu__group"><a href="yours.html#login" class="menu__link r-link text-underlined">Login</a></li>
@@ -34,7 +36,7 @@
           <p>Com equipes de sete jogadores, sendo eles: Ponta Direita e esquerda, Armação direita e esquerda, Goleiro, Pivo e Central; O Handebol atualmente faz parte dos jogos olimpicos de verao e da juventude.</p>
           <p>No Brasil, possuimos campeonatos bem conhecidos nesse meio esportivo, como a Liga Nacional de Clubes, entretanto recentemente com o intuito de dar mais vizibilidade ao Handebol feminno no país foi criado a Liga Hand Feminina, onde algumas equipes como Pinheiros, Concordia, Blumenau participam desta primeira edição</p>
         </div>
-<br>
+<br> <!--DANDO 'ENTER' ENTRE OS INTENS-->
 <br>
 <br>
 <br>
@@ -42,6 +44,7 @@
 <br>
 <br>
 <!--ITEM TIMES-->
+<!--TABELA EM HTML-->
     <h3 id="times"> <bold> EQUIPES INTERNACIONAIS DA EHF </bold> </h3> <br>
   <br>
     <p>Aqui constam apenas algumas equipes, algumas de maior destaque e outras pelo protagonismo historico que possuem</p>
@@ -59,7 +62,7 @@
           <th>Competição_atual</th>
       </tr>
     </thead>
-      <tr class="even" >
+      <tr class="even" > <!--SEPARANDO EM CLASSE DIFERENTE PARA MAIOR FACILIDADE DE ESTILIZAR NO CSS-->
         <td>KRIM MERCATOR</td>
         <td>Natalia Derepasko</td>
         <td>Feminino</td>
@@ -114,7 +117,8 @@
             </tr>
   </table>
   <br>
-  <br>
+  <br> 
+  <!--TABELA EM HTML-->
   <h4 id="times"> <bold> EQUIPES NACIONAIS DA CBhb </bold> </h4> <br>
   <p>Aqui constam apenas algumas equipes, algumas de maior destaque e outras pelo protagonismo historico que possuem</p>
   <br>
@@ -130,7 +134,7 @@
         <th>Competição_atual</th>
     </tr>
   </thead>
-    <tr class="even" >
+    <tr class="even" > <!--SEPARANDO EM CLASSE DIFERENTE PARA MAIOR FACILIDADE DE ESTILIZAR NO CSS-->
       <td>Esporte Clube Pinheiros</td>
       <td>2º</td>
       <td>Masculino</td>
@@ -189,7 +193,7 @@
             <td>Feminino</td>
             <td>Brasil</td>
             <td>Profissional</td>
-            <td>Liga Hand Feminina (Campeonato em andamento)</td>
+            <td>Liga Hand Feminina</td>
             </tr>
             <tr>
               <td>Concordia</td>
@@ -197,7 +201,7 @@
               <td>Feminino</td>
               <td>Brasil</td>
               <td>Profissional</td>
-              <td>Liga Hand Feminina (Campeonato em andamento)</td>
+              <td>Liga Hand Feminina</td>
               </tr>
 
 </table>
@@ -207,16 +211,17 @@
     <!--ITEM LOGIN-->
     <h5 id="login"> <bold> BEM-VINDO </bold> </h5> <br>
     <form method="POST" action="processa.php">
-            <!-- ADICIONANDO OS CAMPOS PARA LOGIN SEM O AUTO-COMPLETAR-->
+            <!-- ADICIONANDO OS CAMPOS PARA LOGIN-->
       <input type="e-mail" name="login" placeholder="Login:" autocomplete="off"> <br> 
+      <!--ITEM LOGIN SO ACEITANDO EMAIL E SEM AUTOCOMPLETAR-->
       <br>
-     
       <input name="password1" type="password" placeholder="Senha:" id="password" autocomplete="off"/> <br> 
+      <!--CAMPOS DE SENHA TAMBEM SEM AUTOCOMPLETAR E COM CONFIRMAÇÃO DE SENHA-->
       <br>
-      <input name="password2" type="password" placeholder="Confirme sua senha:" id="confirm_password" autocomplete="off"/> <br>
-       <input type="checkbox" size="10" name="manter" value="conectado"><label for="checkbox"> Manter-me conectado</label> <br> <br><input type="submit" name="Entrar" value="Entrar"> <br>
+      <input name="password2" type="password" placeholder="Confirme sua senha:" id="password" autocomplete="off"/> <br>
+       <input type="checkbox" size="10" name="manter" value="conectado"><label for="checkbox"> Manter-me conectado</label> <br> <br><input type="submit" name="Entrar" value="Entrar"> <br> <!-- ENTRAR DIRECIONA PARA A PROX TELA-->
       <br>
-      <input type="button" name="Cadastro" value="Registre-se"> <br><input type="button" value="Esqueci minha senha" name="Esqueci minha Senha" id="forgot-pass"> <br>
+      <input type="button" name="Cadastro" value="Registre-se"> <br><input type="button" value="Esqueci minha senha" name="Esqueci minha Senha" id="forgot-pass"> <br> <!--BOTOES  EXTRAS E FICTICIOS POIS NAO DIRECIONA-->
       <br>
       </div>
 
