@@ -31,17 +31,17 @@ def main():
     db_name = 'test.db'
     # deleta & cria o banco de dados, toda vez que o backend for iniciado
     model.main(db_path, db_name)
-    #colocando como pagina inicial
-    app = Flask(__name__, template_folder='view/pages')
-    @app.route('/initial')
+
+    #colocando o yours.html como pagina inicial
+    app = Flask(__name__, template_folder= 'template')
+    @app.route('/')
     def initial_page():
-        return render_template('yours.html')
+        return render_template('index.html')
 
     #populando tabela:
     @app.route('/populate_table', methods=['POST'])
     def populate_table():
      with model.SQLite(os.path.join(db_path, db_name)) as cursor:
-         
         nome_tabela ='ATLETAS' #selecionando tabela para aparecer
         busca = 'SELECT nome, idade, naipe, categoria, posição FROM %s' % nome_tabela #indicando colunas para puxar
         tabela = model.select_rows(cursor, busca)
