@@ -33,7 +33,7 @@ def main():
     model.main(db_path, db_name)
 
     #colocando o yours.html como pagina inicial
-    app = Flask(__name__, template_folder= 'template')
+    app = Flask(__name__, template_folder=os.path.join(filepath, '..', 'view', 'pages'))
     @app.route('/')
     def initial_page():
         return render_template('index.html')

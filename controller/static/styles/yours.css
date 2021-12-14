@@ -1,0 +1,265 @@
+/* ESTILO CAPA "ENTRADA" DA PAGINA*/
+header{
+    font: sans-serif;
+    background-image: url('https://cdn.pixabay.com/photo/2017/02/27/11/16/sports-2102975_960_720.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    height: 90%;
+    color: white;
+    background: #000000b6;
+}
+section{
+    height: 120px;
+}
+   @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}
+/* MENU HORIZONTAL (CODIGO PRONTO POREM ALTERADO PARA COMBINAR MELHOR AO HTML) 
+https://codepen.io/melnik909/pen/VQOodQ  RESPONSIVO*/
+
+.r-link{
+  display: var(--rLinkDisplay, inline-flex) !important;
+}
+.r-link[href]{
+  color: var(--rLinkColor) !important;
+  text-decoration: var(--rLinkTextDecoration, none) !important;
+}
+.r-list{
+  padding-left: var(--rListPaddingLeft, 0) !important;
+  margin-top: var(--rListMarginTop, 0) !important;
+  margin-bottom: var(--rListMarginBottom, 0) !important;
+  list-style: var(--rListListStyle, none) !important;
+}
+.menu{
+  --rLinkColor: var(--menuLinkColor, currentColor);
+}
+.menu__link{
+  display: var(--menuLinkDisplay, block);
+}
+.menu__link:focus{
+  outline: var(--menuLinkOutlineWidth, 2px) solid var(--menuLinkOutlineColor, currentColor);
+  outline-offset: var(--menuLinkOutlineOffset);
+}
+.menu:hover .menu__link:not(:hover){
+  --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
+}
+.menu{
+  background-color: var(--menuBackgroundColor, #000000b6);
+  box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+}
+.menu__list{
+  display: flex;  
+}
+.menu__link{
+  padding: var(--menuLinkPadding, 1.5rem 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.text-underlined{
+  position: relative;
+  overflow: hidden;
+
+  will-change: color;
+  transition: color .25s ease-out;  
+}
+.text-underlined::before, 
+.text-underlined::after{
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--textUnderlinedLineColor, currentColor);
+
+  will-change: width;
+  transition: width .1s ease-out;
+
+  position: absolute;
+  bottom: 0;
+}
+.text-underlined::before{
+  left: 50%;
+  transform: translateX(-50%); 
+}
+.text-underlined::after{
+  right: 50%;
+  transform: translateX(50%); 
+}
+.text-underlined:hover::before, 
+.text-underlined:hover::after{
+  width: 100%;
+  transition-duration: .2s;
+}
+.page__custom-settings{
+  --menuBackgroundColor: #000000b6;
+  --menuLinkColor: #fff;
+  --menuLinkColorUnactive: #1c4669;
+  --menuLinkOutlineOffset: -.5rem; 
+}
+body{
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;  
+  flex-direction: column;
+}
+.page{
+  box-sizing: border-box;
+  float: top;
+  max-width: 1900px;
+  padding-left: .0rem;
+  padding-right: .0rem;
+}
+.page__menu:nth-child(n+2){
+  margin-top: 3rem;
+}
+
+/* MENU HOME*/
+  img{
+      float: left;
+      border: transparent thin solid;
+      padding: 10px;
+      margin: 10px;
+      max-width: 600px;
+  }
+  p{
+  font-family: 'Stencil Std', fantasy;
+  font-size: 20px ;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 15px;
+    padding: 2px;
+  color: #000000;     
+  }
+/* MENU LOGIN*/
+div{
+  margin: auto;
+}
+input[type='submit']{
+  padding:10px;
+  padding-top: 4px;
+  border: 1px solid #709CEE;
+  background-color: #709CEE;
+  font-family:'Acme', sans-serif;
+  font-size: 14px;
+  color: white;
+  border-radius: 7px 7px 7px 7px;
+  size: 15px;
+  display: flex;
+}
+input[type='e-mail']{
+  padding: 10px;
+  border: 1px solid #CEE2F8;
+  background-color: #CEE2F8;
+  font-family:'Acme', sans-serif;
+  color: black;
+  border-radius: 20px 20px 20px 20px;
+  size: 10px;
+}
+input[type='password']{
+  padding: 10px;
+  border: 1px solid #CEE2F8;
+  background-color: #CEE2F8;
+  font-family:'Acme', sans-serif;
+  color: black;
+  border-radius: 20px 20px 20px 20px;
+  size: 10px;
+}
+input[type='button']{
+  padding:8px;
+  padding-top: 4px;
+  border: 1px solid #806FE6;
+  background-color: #806FE6;
+  font-family: Dejavu Sans, Arial, Verdana, sans-serif; 
+  color: white;
+  border-radius: 7px 7px 7px 7px;
+  size: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+input[type='checkbox']{
+  margin-top: 3px;
+}
+label{
+  color: #00008B;
+  font-family: 'Acme', sans-serif;
+  font-size: 12px;
+}
+
+/* MENU EQUIPES: TABELAS*/
+table{
+  background:#bccef0;
+  border: solid rgb(0, 0, 0) 0px;
+  font-family: 'Stencil Std', 'fantasy';
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  border-radius: 14px 14px 14px 14px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+table tr.even {
+  background: #F0FFFF;
+}
+td{
+  width: 101px ;
+  height: 40px;
+}
+/*TITULOS*/
+h1{
+  font-size: clamp(1em, 5em + 1vw, 5em);
+  font-family: 'Stencil Std', fantasy;
+}
+h2{
+  color: #00008B;             
+  font-family: 'Stencil Std', fantasy;
+  font-size: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 165px;
+  }
+  
+  h3{
+    color: #00008B;             
+    font-family: 'Stencil Std', fantasy;
+    font-size: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    h4{
+      color: #00008B;             
+      font-family: 'Stencil Std', fantasy;
+      font-size: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 150px;
+      }
+    h5{
+      color: #00008B;             
+      font-family: 'Stencil Std', fantasy;
+      font-size: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      }
+      
