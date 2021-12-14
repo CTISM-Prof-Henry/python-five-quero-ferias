@@ -125,7 +125,7 @@ def main():
             return response
 
     # coloca o backend a rodar
-    app.run()
+    app.run(debug=True) #fazendo o servidor reiniciar automaticamente dps de modificações
 
 
 if __name__ == '__main__':
