@@ -1,6 +1,7 @@
-/* ESTILO CAPA "ENTRADA" DA PAGINA*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"); /* ESTILO CAPA "ENTRADA" DA PAGINA*/
+
 header{
-    font: sans-serif;
+    font-family: sans-serif;
     background-image: url('https://cdn.pixabay.com/photo/2017/02/27/11/16/sports-2102975_960_720.jpg');
     height: 100vh;
     background-attachment: fixed;
@@ -19,7 +20,7 @@ header{
 section{
     height: 120px;
 }
-   @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -84,7 +85,7 @@ https://codepen.io/melnik909/pen/VQOodQ  RESPONSIVO*/
   content: "";
   width: 0;
   height: 3px;
-  background-color: var(--textUnderlinedLineColor, currentColor);
+  /*background-color: var(--textUnderlinedLineColor, currentColor);*/
 
   will-change: width;
   transition: width .1s ease-out;

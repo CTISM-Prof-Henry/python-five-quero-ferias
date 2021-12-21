@@ -33,7 +33,7 @@ def main():
     model.main(db_path, db_name)
 
     #colocando o yours.html como pagina inicial
-    app = Flask(__name__, template_folder=os.path.join(filepath, '..', 'view', 'pages'))
+    app = Flask(__name__)
     @app.route('/')
     def initial_page():
         return render_template('index.html')
@@ -125,7 +125,7 @@ def main():
             return response
 
     # coloca o backend a rodar
-    app.run(debug=True) #fazendo o servidor reiniciar automaticamente dps de modificações
+    app.run(debug=False) #fazendo o servidor reiniciar automaticamente dps de modificações
 
 
 if __name__ == '__main__':
